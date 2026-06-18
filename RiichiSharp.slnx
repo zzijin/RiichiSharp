@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="RiichiSharp.Tests/RiichiSharp.Tests.csproj" />
+  <Project Path="RiichiSharp/RiichiSharp.csproj" />
+</Solution>

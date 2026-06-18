@@ -1,6 +1,6 @@
-# MahjongAlgorithms
+# RiichiSharp
 
-日本立直麻将计分引擎（.NET 10）。算法综合参考 [agari](https://github.com/agari-industries/agari)（Rust）、[tempai-core](https://github.com/dnovikoff/tempai-core)（Go）、[tomohxx](https://github.com/tomohxx/mahjong-algorithms)（C++）、[pyriichi](https://github.com/d4n1elchen/pyriichi)（Python）四个开源项目。
+日本立直麻将计分引擎（.NET 8 / .NET 10）。算法综合参考 [agari](https://github.com/agari-industries/agari)（Rust）、[tempai-core](https://github.com/dnovikoff/tempai-core)（Go）、[tomohxx](https://github.com/tomohxx/mahjong-algorithms)（C++）、[pyriichi](https://github.com/d4n1elchen/pyriichi)（Python）四个开源项目。
 
 ## 功能
 
@@ -22,7 +22,7 @@
 ## 快速开始
 
 ```csharp
-using MahjongAlgorithms;
+using RiichiSharp;
 
 // 一行计分
 var result = MahjongEngine.Score("123m456p789s11122z", new GameContext
@@ -43,7 +43,7 @@ Console.WriteLine($"最佳切牌: {discards[0].Discarded}");  // → W
 // 对手预测
 var wall = new TileSet(); // 牌山每种牌剩余枚数
 var river = new TileSet(); // 对手牌河
-var pred = WaitPredictor.WaitPredictor.Predict(wall, river);
+var pred = RiichiSharp.WaitPredictor.Predictor.Predict(wall, river);
 foreach (var (tile, prob) in pred.Ranked.Take(5))
     Console.WriteLine($"{tile}: {prob:P1}");  // 对手最可能的5张待牌
 ```
@@ -51,9 +51,9 @@ foreach (var (tile, prob) in pred.Ranked.Take(5))
 ## 构建
 
 ```bash
-cd MahjongAlgorithms
+cd RiichiSharp
 dotnet build
-cd MahjongAlgorithms.Tests
+cd RiichiSharp.Tests
 dotnet test   # 248 个测试
 ```
 

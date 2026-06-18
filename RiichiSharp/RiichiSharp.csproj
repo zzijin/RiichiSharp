@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <!-- NuGet 包元数据 -->
+    <PackageId>RiichiSharp</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>zzijin</Authors>
+    <Description>日本立直麻将计分引擎。向听数/役种判定/符计算/点数计算/振听检测/对手待牌预测。零外部依赖。</Description>
+    <PackageTags>mahjong;riichi;shanten;yaku;fu;score;tenpai;furiten;wait-predictor</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/zzijin/RiichiSharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/zzijin/RiichiSharp</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
